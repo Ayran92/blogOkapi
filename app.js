@@ -17,7 +17,7 @@ app.use("/mais-lidos", roteadorMaisLidos);
 app.use("/contato", roteadorContato);
 
 
-app.listen(5000, (erro) => {
+app.listen(process.env.PORT || 5000, (erro) => {
     if (erro) {
         throw erro;
     }
