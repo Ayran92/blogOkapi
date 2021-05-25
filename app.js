@@ -8,7 +8,7 @@ const roteadorPainelPosts = require("./routes/painel-posts");
 const Posts = require("./models/Post");
 const app  = express();
 
-mongoose.connect("mongodb://localhost/okapiBlog", {
+mongoose.connect(process.env.MONGO_URL, {
     useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true
 });
 
