@@ -13,15 +13,17 @@
     <header>
         <%- include("../partials/header") %>
     </header>
-    <form action="">
+    <form action="/painel-posts" method="POST">
         <div class="container">
             <div class="info-basicas">
                 <label for="titulo">Titulo:</label>
                 <input type="text" id="titulo" name="titulo" placeholder="Ex: Criatividade S.A">
                 <label for="descricao">Descricao:</label>
                 <input type="text" id="descricao" name="descricao" placeholder="Ex: Livro sobre criatividade">
-                <label for="link-capa">Capa do Livro:</label>
-                <input type="text" id="link-capa" name="link-capa" placeholder="https://m.media-amazon.com/images/I/41qs24vpygL.jpg">
+                <label for="linkCapa">Capa do Livro:</label>
+                <input type="text" id="linkCapa" name="linkCapa" placeholder="https://m.media-amazon.com/images/I/41qs24vpygL.jpg">
+                <label for="categoria">Categoria:</label>
+                <input type="text" id="categoria" name="categoria" placeholder="Terror">
                 <div class="submitForm">
                     <input class="submitButao" type="submit" value="Salvar">
                 </div> 
