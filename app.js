@@ -18,8 +18,19 @@ app.use(express.static("public"));
 
 
 app.get("/", async (req, res) => {
-    const posts = await Posts.find().sort({dataCriacao: "desc"})
-    res.render("./pages/home", { posts: posts });
+    const terror = await Posts.find({categoria: "Terror"});
+    const ciencias = await Posts.find({categoria: "Ciencias"});
+    const fantasia = await Posts.find({categoria: "Fantasia"});
+    const autoAjuda = await Posts.find({categoria: "Auto Ajudo"});
+    
+    const posts = await Posts.find().sort({createdAt: "desc"})
+    res.render("./pages/home", { 
+        posts: posts,
+        terror: terror.length,
+        ciencias: ciencias.length,
+        fantasia: fantasia.length,
+        autoAjuda: autoAjuda.length
+    });
 });
 
 app.use("/estante-de-livros", rotaEstanteDeLivros);

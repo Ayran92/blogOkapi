@@ -15,12 +15,9 @@
     </header>
     <main>
         <ul class="containerLista">
-            <li class="containerLivro"><img class="capaLivro" src="https://m.media-amazon.com/images/I/41qs24vpygL.jpg" alt=""></li>
-            <li class="containerLivro"><img class="capaLivro" src="https://images-na.ssl-images-amazon.com/images/I/81XTXQEVPlL.jpg" alt=""></li>
-            <li class="containerLivro"><img class="capaLivro" src="https://images-na.ssl-images-amazon.com/images/I/515rjH7yikL._SX342_SY445_QL70_ML2_.jpg" alt=""></li>
-            <li class="containerLivro"><img class="capaLivro" src="https://images-na.ssl-images-amazon.com/images/I/51VKbEh8uSL._SX356_BO1,204,203,200_.jpg" alt=""></li>
-            <li class="containerLivro"><img class="capaLivro" src="https://images-na.ssl-images-amazon.com/images/I/71QtOUBMtNL.jpg" alt=""></li>
-            <li class="containerLivro"><img class="capaLivro" src="https://m.media-amazon.com/images/I/51w53T12s8L.jpg" alt=""></li>
+            <% posts.forEach(posts => { %>
+                <li class="containerLivro"><img class="capaLivro" src=<%=posts.linkCapa %> alt=""></li>
+            <% }) %>
         </ul>
     </main>
 </body>
